@@ -17,7 +17,6 @@ The file run_analysis.R contains the script doing the following (the script assu
 2. read the features.txt file    
 3. find the indexes for all measurements with either the "mean" or the "std()" keywords    
 4. loop for all the datasets    
-
   + read the measurement file  (X_????.txt)    
   + set the column names using data read from features.txt    
   + only select columns relating to mean or standard deviation   
@@ -26,7 +25,6 @@ The file run_analysis.R contains the script doing the following (the script assu
   + read in the subject (subject_????.txt)    
   + column bind the subject, activity, and the measurement subset    
   + if this is the first dataset, set the result of the column bind to allRows else merge into allRows    
-   
 5. calculate the mean of each measurement group by subject and activity    
 6. set the column name for the subject and activity columns    
 

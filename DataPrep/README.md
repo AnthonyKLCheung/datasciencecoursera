@@ -24,7 +24,8 @@ The file run_analysis.R contains the script doing the following (the script assu
   + join the activity file with the activity label such that the activity description is there for each observation    
   + read in the subject (subject_????.txt)    
   + column bind the subject, activity, and the measurement subset    
-  + if this is the first dataset, set the result of the column bind to allRows else merge into allRows    
+  + if this is the first dataset, set the result of the column bind to allRows else merge into allRows   
+  
 *calculate the mean of each measurement group by subject and activity    
 *set the column name for the subject and activity columns    
 

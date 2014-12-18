@@ -35,6 +35,7 @@ Subject   Subject ID: 1..30
 Activity  Value set is {WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING}   
 
 The rest of the columns are the mean of the following measurements. Features are normalized and bounded within [-1,1]
+Detailed description of each of the features can be found at feature_info.txt and README.txt files in the root directory of the unzip content of the original data.   
 
 tBodyAcc-mean()-X   
 tBodyAcc-mean()-Y   

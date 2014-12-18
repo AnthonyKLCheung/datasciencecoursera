@@ -15,11 +15,11 @@ The zip file contains 2 sets of data, the training set and the test set, each in
 The file run_analysis.R contains the script doing the following (the script assume a data directory at the working directory containing the unzip contents from the original data zip file)    
 *read the activity_labels.txt file    
 *read the features.txt file    
-*find the indexes for all measurements with either the "mean" or the "std()" keywords    
+*find the indexes for all measurements with either the "mean", "Mean", or the "std()" substring in the name    
 *loop for all the datasets    
   + read the measurement file  (X_????.txt)    
   + set the column names using data read from features.txt    
-  + only select columns relating to mean or standard deviation   
+  + only select columns using the index subset predetermined before the loop   
   + read the activity file (y_????.txt)    
   + join the activity file with the activity label such that the activity description is there for each observation    
   + read in the subject (subject_????.txt)    
@@ -31,10 +31,10 @@ The file run_analysis.R contains the script doing the following (the script assu
 
 **Description of the columns in the output**
 
-Subject   1..30   
-Activity  WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING   
+Subject   Subject ID: 1..30   
+Activity  Value set is {WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING}   
 
-The rest of the columns are the mean of the following measurements
+The rest of the columns are the mean of the following measurements. Features are normalized and bounded within [-1,1]
 
 tBodyAcc-mean()-X   
 tBodyAcc-mean()-Y   
@@ -112,3 +112,10 @@ fBodyBodyGyroMag-std()
 fBodyBodyGyroJerkMag-mean()   
 fBodyBodyGyroJerkMag-std()   
 fBodyBodyGyroJerkMag-meanFreq()   
+angle(tBodyAccMean,gravity)   
+angle(tBodyAccJerkMean),gravityMean)   
+angle(tBodyGyroMean,gravityMean)   
+angle(tBodyGyroJerkMean,gravityMean)   
+angle(X,gravityMean)   
+angle(Y,gravityMean)   
+angle(Z,gravityMean)   

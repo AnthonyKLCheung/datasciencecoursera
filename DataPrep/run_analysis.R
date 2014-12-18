@@ -15,7 +15,7 @@ activityLabel<-read.table(paste(baseDirectory, "activity_labels.txt", sep=""))
 features<-read.table(paste(baseDirectory, "features.txt", sep=""))
 
 # find out the column indexes for all names with mean or std()
-allMeans <- grep("mean",features$V2)
+allMeans <- grep("mean",features$V2, ignore.case = TRUE)
 allStds <- grep("std\\(\\)", features$V2)
 allColumns <- sort(c(allMeans, allStds))
 
